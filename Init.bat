@@ -1,12 +1,15 @@
 @echo off
-setlocal
+setlocal ENABLEDELAYEDEXPANSION
 title=Linking Game Save Files...
-cd %~dp0
+cd /d %~dp0
 set CloudFolder="C:\Program Files (x86)\Steam\userdata\324014709"
 if not exist "C:\Users\%username%\Documents\My Games" md "C:\Users\%username%\Documents\My Games"
 if not exist "C:\Users\%username%\Saved Games" md "C:\Users\%username%\Saved Games"
-if exist "Klei" md "C:\Users\%username%\Documents\Klei"
-
+if not exist "C:\Users\%username%\Documents\Klei" (
+    if exist "DoNotStarveTogether" md "C:\Users\%username%\Documents\Klei"
+    if exist "OxygenNotIncluded" md "C:\Users\%username%\Documents\Klei"
+)
+echo.
 call:fun "DoNotStarveTogether"          "C:\Users\%username%\Documents\Klei\DoNotStarveTogether"
 call:fun "OxygenNotIncluded"            "C:\Users\%username%\Documents\Klei\OxygenNotIncluded"
 call:fun "Planescape Torment"           "C:\Users\%username%\Documents\Planescape Torment - Enhanced Edition"
@@ -49,44 +52,53 @@ call:funC "Terraria SteamCloud"             105600
 call:funC "Planescape Torment SteamCloud"   466300
 call:funC "Dead Cells"                      588650
 
-title=Finished!
-pause>nul
+title Finished!
+echo.
+echo. ^> All finished!
+pause > nul
 exit
 
 :fun
 if exist %1 (
-    echo\
-    echo\
-    echo %~1
+    echo. ^# %~1
     if not exist %2 (
-        mklink /d %2 "%cd%\%~1"
+        mklink /d %2 "%cd%\%~1" > nul && (echo. ^> Finished.) || goto Failed
         ) else (
-        echo\
-        set /p pp="There have been save files of %~1, input Y to replace them:"
+        set /p pp=">> There have been save files of %~1, input Y to replace them: "
         if "!pp!"=="y" set pp=Y
         if "!pp!"=="Y" (
             rd /s /q %2
-            mklink /d %2 "%cd%\%~1" 
+            mklink /d %2 "%cd%\%~1" > nul && (echo. ^> Finished.) || goto Failed
             set pp=
-        )))
+        ))
+    echo.
+    )
 goto:eof
 
 :funC
 if exist %1 (
-    echo\
-    echo\
-    echo %~1
+    echo. ^# %~1
     if not exist %CloudFolder% md %CloudFolder%
     if not exist "%CloudFolder:~1,-1%\%2" (
-        mklink /d "%CloudFolder:~1,-1%\%2" "%cd%\%~1"
+        mklink /d "%CloudFolder:~1,-1%\%2" "%cd%\%~1" > nul && (echo. ^> Finished.) || call:Failed
         ) else (
-        set /p pp="There have been save files of %~1, input Y to replace them:"
+        set /p pp=">> There have been save files of %~1, input Y to replace them: "
         if "!pp!"=="y" set pp=Y
         if "!pp!"=="Y" (
             rd /s /q "%CloudFolder:~1,-1%\%2"
-            mklink /d "%CloudFolder:~1,-1%\%2" "%cd%\%~1" 
-        )
+            mklink /d "%CloudFolder:~1,-1%\%2" "%cd%\%~1" > nul && (echo. ^> Finished.) || call:Failed
+            set pp=
+        ))
+    echo.
     )
-)
 goto:eof
+
+:Failed
+title FATAL ERROR: Please run this as administrator!
+cls
+echo.
+echo. ^* FATAL ERROR: Please run this as administrator!
+echo.
+pause > nul
+exit
 
