@@ -1,0 +1,18 @@
+1.0.0 - 2021-03-20  lxvs
+
+	* RESET VERSION NUMBER
+	* ADD: CHANGELOG
+	* ADD: .gitattributes
+	* RENAME: init.bat -> cloud-deploy.bat
+	* RENAME: rmdir.bat -> cloud-remove.bat
+	* BUGFIX: trying to link uninstalled game causes script to think
+	          it has no administrator privilege.
+	* IMRPOVEMENT: remove unneeded delayed expansion.
+	* IMPROVEMENT: replace C:\Users\%username% with %userprofile%.
+	* IMRPOVEMENT: replace C:\Program Files (x86) with
+	               %programfiles(x86)%.
+	* IMPROVEMENT: rename fun and funC to Link/Unlink and LinkC/UnlinkC.
+	* IMPROVEMENT: add status report in cloud-remove.bat.
+	* IMPROVEMENT: script prompts.
+	* IMPROVEMENT: swap 2 parameters of LinkC function to be prettier.
+	* IMPROVEMENT: break the link calling command to 2 lines.
