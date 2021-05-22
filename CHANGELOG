@@ -1,3 +1,11 @@
+1.0.1 - 2021-05-22  lxvs
+
+	* Add version display
+	* Add 2 'popd's for pushd
+	* replace 'goto:eof' with 'exit /b'
+	* replace 'exit' with 'exit /b'
+	* replace common paths with variables
+
 1.0.0 - 2021-03-20  lxvs
 
 	* RESET VERSION NUMBER

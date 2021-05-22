@@ -1,84 +1,101 @@
 @echo off
 setlocal
+
+@set "version=v1.0.1"
+@set "lupdate=2021-05-22"
+@title Cloud Save Linker %version%
+@echo;
+@echo     Cloud Save Linker %version%
+@echo     https://github.com/lxvs/cloud
+@echo     Last update: %lupdate%
+@echo;
+
 pushd %~dp0
-set "steamFolder=%programfiles(x86)%\Steam"
-set "cloudFolder=%steamFolder%\userdata\324014709"
-if not exist "%userprofile%\Documents\My Games" md "%userprofile%\Documents\My Games"
-if not exist "%userprofile%\Saved Games" md "%userprofile%\Saved Games"
-if not exist "%userprofile%\Documents\Klei" (
-    if exist "DoNotStarveTogether" md "%userprofile%\Documents\Klei"
-    if exist "OxygenNotIncluded" md "%userprofile%\Documents\Klei" 2>nul
+
+@set "steamFolder=%programfiles(x86)%\Steam"
+@set "steamCommon=%steamFolder%\steamapps\common"
+@set "cloudFolder=%steamFolder%\userdata\324014709"
+@set "documents=%USERPROFILE%\Documents"
+@set "mygames=%documents%\My Games"
+@set "savedgames=%USERPROFILE%\Saved Games"
+@set "localLowAppData=%USERPROFILE%\AppdData\LocalLow"
+
+if not exist "%mygames%" md "%mygames%"
+if not exist "%savedgames%" md "%savedgames%"
+if not exist "%documents%\Klei" (
+    if exist "DoNotStarveTogether" md "%documents%\Klei"
+    if exist "OxygenNotIncluded" md "%documents%\Klei" 2>nul
 )
 call:Link "DoNotStarveTogether" ^
-    "%userprofile%\Documents\Klei\DoNotStarveTogether"
+    "%documents%\Klei\DoNotStarveTogether"
 call:Link "OxygenNotIncluded" ^
-    "%userprofile%\Documents\Klei\OxygenNotIncluded"
+    "%documents%\Klei\OxygenNotIncluded"
 call:Link "Planescape Torment" ^
-    "%userprofile%\Documents\Planescape Torment - Enhanced Edition"
+    "%documents%\Planescape Torment - Enhanced Edition"
 call:Link "Criterion Games" ^
-    "%userprofile%\Documents\Criterion Games"
+    "%documents%\Criterion Games"
 call:Link "GTA Vice City" ^
-    "%userprofile%\Documents\GTA Vice City User Files"
+    "%documents%\GTA Vice City User Files"
 call:Link "Euro Truck Simulator 2" ^
-    "%userprofile%\Documents\Euro Truck Simulator 2"
+    "%documents%\Euro Truck Simulator 2"
 call:Link "Streets of Rogue" ^
-    "%userprofile%\Documents\Streets of Rogue"
+    "%documents%\Streets of Rogue"
 call:Link "Fallout4" ^
-    "%userprofile%\Documents\My Games\Fallout4"
+    "%mygames%\Fallout4"
 call:Link "Terraria" ^
-    "%userprofile%\Documents\My Games\Terraria"
+    "%mygames%\Terraria"
 call:Link "Torchlight 2" ^
-    "%userprofile%\Documents\My Games\runic games"
+    "%mygames%\runic games"
 call:Link "Opus Magnum" ^
-    "%userprofile%\Documents\My Games\Opus Magnum"
+    "%mygames%\Opus Magnum"
 call:Link "Diablo II" ^
-    "%userprofile%\Saved Games\Diablo II"
+    "%savedgames%\Diablo II"
 call:Link "The Long Dark" ^
-    "%userprofile%\AppData\Local\Hinterland"
+    "%LOCALAPPDATA%\Hinterland"
 call:Link "World of Goo" ^
-    "%userprofile%\AppData\Local\2DBoy"
+    "%LOCALAPPDATA%\2DBoy"
 call:Link "UNDERTALE" ^
-    "%userprofile%\AppData\Local\UNDERTALE"
+    "%LOCALAPPDATA%\UNDERTALE"
 call:Link "Geometry Dash" ^
-    "%userprofile%\AppData\Local\GeometryDash"
+    "%LOCALAPPDATA%\GeometryDash"
 call:Link "Bejeweled3" ^
-    "%userprofile%\AppData\Local\Steam\Bejeweled3"
+    "%LOCALAPPDATA%\Steam\Bejeweled3"
 call:Link "Nuclear Throne" ^
-    "%userprofile%\AppData\Local\nuclearthrone"
+    "%LOCALAPPDATA%\nuclearthrone"
 call:Link "Car Mechanic Simulator 2015" ^
-    "%userprofile%\AppData\LocalLow\Red Dot Games"
+    "%localLowAppData%\Red Dot Games"
 call:Link "Thief Simulator" ^
-    "%userprofile%\AppData\LocalLow\Noble Muffins"
+    "%localLowAppData%\Noble Muffins"
 call:Link "Slime Rancher" ^
-    "%userprofile%\AppData\LocalLow\Monomi Park"
+    "%locallowappdata%\Monomi Park"
 call:Link "Enter the Gungeon" ^
-    "%userprofile%\AppData\LocalLow\Dodge Roll"
+    "%localLowAppData%\Dodge Roll"
 call:Link "Hollow Knight" ^
-    "%userprofile%\AppData\LocalLow\Team Cherry"
+    "%localLowAppData%\Team Cherry"
 call:Link "the Forest" ^
-    "%userprofile%\AppData\LocalLow\SKS"
+    "%localLowAppData%\SKS"
 call:Link "Human Resource Machine" ^
-    "%userprofile%\AppData\Roaming\Human Resource Machine"
+    "%APPDATA%\Human Resource Machine"
 call:Link "Little Inferno" ^
-    "%userprofile%\AppData\Roaming\Little Inferno"
+    "%APPDATA%\Little Inferno"
 call:Link "DarkSoulsIII" ^
-    "%userprofile%\AppData\Roaming\DarkSoulsIII"
+    "%APPDATA%\DarkSoulsIII"
 call:Link "sekiro" ^
-    "%userprofile%\AppData\Roaming\sekiro"
+    "%APPDATA%\sekiro"
 call:Link "StardewValley" ^
-    "%userprofile%\AppData\Roaming\StardewValley"
+    "%APPDATA%\StardewValley"
 call:Link "Death Road to Canada" ^
-    "%userprofile%\AppData\Roaming\.madgarden"
+    "%APPDATA%\.madgarden"
 call:Link "FEZ" ^
-    "%userprofile%\AppData\Roaming\FEZ"
+    "%APPDATA%\FEZ"
 call:Link "Celeste" ^
-    "%steamFolder%\steamapps\common\Celeste\Saves"
+    "%steamCommon%\Celeste\Saves"
 call:Link "Rabi-Ribi" ^
-    "%steamFolder%\steamapps\common\Rabi-Ribi\Save"
+    "%steamCommon%\Rabi-Ribi\Save"
 call:Link "CSCZ" ^
-    "%steamFolder%\steamapps\common\Half-Life\czero\Save"
+    "%steamCommon%\Half-Life\czero\Save"
 call:Link "Slay the Spire" ^
-    "%steamFolder%\steamapps\common\SlayTheSpire\preferences"
+    "%steamCommon%\SlayTheSpire\preferences"
 
 call:LinkC 233980 "Unepic"
 call:LinkC 583470 "The End Is Nigh"
@@ -86,6 +103,7 @@ call:LinkC 105600 "Terraria SteamCloud"
 call:LinkC 466300 "Planescape Torment SteamCloud"
 call:LinkC 588650 "Dead Cells"
 
+@popd
 echo ^> All finished.
 pause
 exit /b 0
@@ -96,7 +114,7 @@ if exist %1 (
     if not exist "%~dp2" (
         echo ^> Game is not installed.
         echo;
-        goto:eof
+        exit /b
     )
     if not exist "%~2" (
         mklink /d "%~2" "%cd%\%~1" >nul 2>&1 || goto failed
@@ -104,7 +122,7 @@ if exist %1 (
     ) else call:LinkOW %1 %2
     echo;
 )
-goto:eof
+exit /b
 
 :LinkOW
 set owcfm=
@@ -114,7 +132,7 @@ if /i "%owcfm%"=="Y" (
     mklink /d "%~2" "%cd%\%~1" >nul 2>&1 || goto failed
     echo ^> Finished.
 ) else echo ^> Ignored.
-goto:eof
+exit /b
 
 :LinkC
 if exist "%~2" (
@@ -126,7 +144,7 @@ if exist "%~2" (
     ) else call:LinkCOW %1 %2
     echo;
 )
-goto:eof
+exit /b
 
 :LinkCOW
 set owcfm=
@@ -136,9 +154,10 @@ if /i "%owcfm%"=="Y" (
     mklink /d "%cloudFolder%\%~1" "%cd%\%~2" >nul 2>&1 || goto failed
     echo ^> Finished.
 ) else echo ^> Ignored.
-goto:eof
+exit /b
 
 :failed
+@popd
 echo ^> ERROR: Please run this as administrator.
 pause
 exit 1
