@@ -8,12 +8,13 @@
 @set "cloudFolder=%steamFolder%\userdata\%steamUserId%"
 @set "documents=%USERPROFILE%\Documents"
 @set "my_games=%documents%\My Games"
-@set "savedgames=%USERPROFILE%\SavedGames"
 @set "saved_games=%USERPROFILE%\Saved Games"
+@set "saved_games_1=%documents%\Saved Games"
+@set "savedgames=%documents%\SavedGames"
 @set "localLowAppData=%USERPROFILE%\AppData\LocalLow"
 @REM =======================================================================
 
-@set "version=v1.1.3"
+@set "version=v1.1.4"
 @set "lupdate=2021-05-23"
 @title Cloud Save Linker %version%
 @echo;

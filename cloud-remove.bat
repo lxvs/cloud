@@ -8,8 +8,9 @@ setlocal
 @set "cloudFolder=%steamFolder%\userdata\%steamUserId%"
 @set "documents=%USERPROFILE%\Documents"
 @set "my_games=%documents%\My Games"
-@set "savedgames=%USERPROFILE%\SavedGames"
 @set "saved_games=%USERPROFILE%\Saved Games"
+@set "saved_games_1=%documents%\Saved Games"
+@set "savedgames=%documents%\SavedGames"
 @set "localLowAppData=%USERPROFILE%\AppData\LocalLow"
 @REM =======================================================================
 
