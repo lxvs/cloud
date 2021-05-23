@@ -16,8 +16,8 @@ $ Line start with '$' will be ignored
 $ Spaces can be contained in folder-name, but do NOT add extra spaces before
 $ or after the line, or the '|' symbol.
 
-233980|Unepic
-583470|The End Is Nigh
 105600|Terraria SteamCloud
+233980|Unepic
 466300|Planescape Torment SteamCloud
+583470|The End Is Nigh
 588650|Dead Cells

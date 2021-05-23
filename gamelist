@@ -16,38 +16,39 @@ $ Line start with '$' will be ignored
 $ Spaces can be contained in folder-name or game-save-location, but do NOT
 $ add extra spaces before or after the line, or the '|' symbol.
 
-DoNotStarveTogether|%documents%\Klei\DoNotStarveTogether
-OxygenNotIncluded|%documents%\Klei\OxygenNotIncluded
-Planescape Torment|%documents%\Planescape Torment - Enhanced Edition
-Criterion Games|%documents%\Criterion Games
-GTA Vice City|%documents%\GTA Vice City User Files
-Euro Truck Simulator 2|%documents%\Euro Truck Simulator 2
-Streets of Rogue|%documents%\Streets of Rogue
-Fallout4|%my_games%\Fallout4
-Terraria|%my_games%\Terraria
-Torchlight 2|%my_games%\runic games
-Opus Magnum|%my_games%\Opus Magnum
-Diablo II|%saved_games%\Diablo II
-The Long Dark|%LOCALAPPDATA%\Hinterland
-World of Goo|%LOCALAPPDATA%\2DBoy
-UNDERTALE|%LOCALAPPDATA%\UNDERTALE
-Geometry Dash|%LOCALAPPDATA%\GeometryDash
+AxiomVerge|%savedgames%\AxiomVerge
 Bejeweled3|%LOCALAPPDATA%\Steam\Bejeweled3
-Nuclear Throne|%LOCALAPPDATA%\nuclearthrone
 Car Mechanic Simulator 2015|%localLowAppData%\Red Dot Games
-Thief Simulator|%localLowAppData%\Noble Muffins
-Slime Rancher|%locallowappdata%\Monomi Park
+Celeste|%steamCommon%\Celeste\Saves
+Criterion Games|%documents%\Criterion Games
+CSCZ|%steamCommon%\Half-Life\czero\Save
+DarkSoulsIII|%APPDATA%\DarkSoulsIII
+Death Road to Canada|%APPDATA%\.madgarden
+Diablo II|%saved_games%\Diablo II
+DoNotStarveTogether|%documents%\Klei\DoNotStarveTogether
 Enter the Gungeon|%localLowAppData%\Dodge Roll
+Euro Truck Simulator 2|%documents%\Euro Truck Simulator 2
+Fallout4|%my_games%\Fallout4
+FEZ|%APPDATA%\FEZ
+Geometry Dash|%LOCALAPPDATA%\GeometryDash
+GTA Vice City|%documents%\GTA Vice City User Files
 Hollow Knight|%localLowAppData%\Team Cherry
-the Forest|%localLowAppData%\SKS
 Human Resource Machine|%APPDATA%\Human Resource Machine
 Little Inferno|%APPDATA%\Little Inferno
-DarkSoulsIII|%APPDATA%\DarkSoulsIII
-sekiro|%APPDATA%\sekiro
-StardewValley|%APPDATA%\StardewValley
-Death Road to Canada|%APPDATA%\.madgarden
-FEZ|%APPDATA%\FEZ
-Celeste|%steamCommon%\Celeste\Saves
+Nuclear Throne|%LOCALAPPDATA%\nuclearthrone
+Opus Magnum|%my_games%\Opus Magnum
+OxygenNotIncluded|%documents%\Klei\OxygenNotIncluded
+Planescape Torment|%documents%\Planescape Torment - Enhanced Edition
 Rabi-Ribi|%steamCommon%\Rabi-Ribi\Save
-CSCZ|%steamCommon%\Half-Life\czero\Save
+sekiro|%APPDATA%\sekiro
 Slay the Spire|%steamCommon%\SlayTheSpire\preferences
+Slime Rancher|%locallowappdata%\Monomi Park
+StardewValley|%APPDATA%\StardewValley
+Streets of Rogue|%documents%\Streets of Rogue
+Terraria|%my_games%\Terraria
+the Forest|%localLowAppData%\SKS
+The Long Dark|%LOCALAPPDATA%\Hinterland
+Thief Simulator|%localLowAppData%\Noble Muffins
+Torchlight 2|%my_games%\runic games
+UNDERTALE|%LOCALAPPDATA%\UNDERTALE
+World of Goo|%LOCALAPPDATA%\2DBoy
