@@ -1,3 +1,13 @@
+1.1.0 - 2021-05-23  lxvs
+
+	* Create file gamelist and gamelist-steamcloud. Now scripts read
+	  game items from these 2 files.
+	* Fix an issue that the script must exit cmd.exe when meets errors.
+	* cloud-remove: replace goto:eof with exit /b.
+	* cloud-remove: replace Unink with Unlink.
+	* Add README.txt and update README.md
+	* Update git attributes.
+
 1.0.1 - 2021-05-22  lxvs
 
 	* Add version display

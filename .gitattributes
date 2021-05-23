@@ -1,4 +1,7 @@
-.gitattributes export-ignore
-.gitignore export-ignore
-VERSION export-ignore
-*.bat eol=crlf
+.gitattributes          export-ignore
+.gitignore              export-ignore
+VERSION                 export-ignore
+*.bat                   eol=crlf
+README.txt              eof=crlf
+gamelist                eof=crlf
+gamelist-steamcloud     eof=crlf

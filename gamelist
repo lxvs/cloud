@@ -1,0 +1,53 @@
+$ gamelist
+$ https://github.com/lxvs/cloud
+$ Last update: 2021-05-23
+
+$ This is a list of all supported games, which the cloud-deploy.bat will
+$ follow to create symbol links.
+
+$ Format:
+$ <folder-name>|<game-save-location>
+
+$ <folder-name> is the name of folder containing the specified game saves in
+$ your cloud storage.
+
+$ Line start with '$' will be ignored
+
+$ Spaces can be contained in folder-name or game-save-location, but do NOT
+$ add extra spaces before or after the line, or the '|' symbol.
+
+DoNotStarveTogether|%documents%\Klei\DoNotStarveTogether
+OxygenNotIncluded|%documents%\Klei\OxygenNotIncluded
+Planescape Torment|%documents%\Planescape Torment - Enhanced Edition
+Criterion Games|%documents%\Criterion Games
+GTA Vice City|%documents%\GTA Vice City User Files
+Euro Truck Simulator 2|%documents%\Euro Truck Simulator 2
+Streets of Rogue|%documents%\Streets of Rogue
+Fallout4|%mygames%\Fallout4
+Terraria|%mygames%\Terraria
+Torchlight 2|%mygames%\runic games
+Opus Magnum|%mygames%\Opus Magnum
+Diablo II|%savedgames%\Diablo II
+The Long Dark|%LOCALAPPDATA%\Hinterland
+World of Goo|%LOCALAPPDATA%\2DBoy
+UNDERTALE|%LOCALAPPDATA%\UNDERTALE
+Geometry Dash|%LOCALAPPDATA%\GeometryDash
+Bejeweled3|%LOCALAPPDATA%\Steam\Bejeweled3
+Nuclear Throne|%LOCALAPPDATA%\nuclearthrone
+Car Mechanic Simulator 2015|%localLowAppData%\Red Dot Games
+Thief Simulator|%localLowAppData%\Noble Muffins
+Slime Rancher|%locallowappdata%\Monomi Park
+Enter the Gungeon|%localLowAppData%\Dodge Roll
+Hollow Knight|%localLowAppData%\Team Cherry
+the Forest|%localLowAppData%\SKS
+Human Resource Machine|%APPDATA%\Human Resource Machine
+Little Inferno|%APPDATA%\Little Inferno
+DarkSoulsIII|%APPDATA%\DarkSoulsIII
+sekiro|%APPDATA%\sekiro
+StardewValley|%APPDATA%\StardewValley
+Death Road to Canada|%APPDATA%\.madgarden
+FEZ|%APPDATA%\FEZ
+Celeste|%steamCommon%\Celeste\Saves
+Rabi-Ribi|%steamCommon%\Rabi-Ribi\Save
+CSCZ|%steamCommon%\Half-Life\czero\Save
+Slay the Spire|%steamCommon%\SlayTheSpire\preferences

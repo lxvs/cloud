@@ -1,0 +1,23 @@
+$ gamelist-steamcloud
+$ https://github.com/lxvs/cloud
+$ Last update: 2021-05-23
+
+$ This is a list of all supported games with steam cloud, which the
+$ cloud-deploy.bat will follow to create symbol links.
+
+$ Format:
+$ <steam-game-id>|<folder-name>
+
+$ <folder-name> is the name of folder containing the specified game saves in
+$ your cloud storage.
+
+$ Line start with '$' will be ignored
+
+$ Spaces can be contained in folder-name, but do NOT add extra spaces before
+$ or after the line, or the '|' symbol.
+
+233980|Unepic
+583470|The End Is Nigh
+105600|Terraria SteamCloud
+466300|Planescape Torment SteamCloud
+588650|Dead Cells
