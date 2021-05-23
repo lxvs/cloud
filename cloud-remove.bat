@@ -23,8 +23,16 @@ setlocal
 )
 
 @if exist gamelist for /f "eol=$ tokens=1,2 delims=|" %%a in (gamelist) do @call:Unlink "%%a" "%%b"
+@echo;
+
+@rd "%my_games%" 2>nul && @echo removed empty folder %my_games%
+@rd "%savedgames%" 2>nul && @echo removed empty folder %savedgames%
+@rd "%saved_games%" 2>nul && @echo removed empty folder %saved_games%
+@rd "%documents%\Klei" 2>nul && @echo removed empty folder %documents%\Klei
+@echo;
 
 @if exist gamelist-steamcloud for /f "eol=$ tokens=1,2 delims=|" %%a in (gamelist-steamcloud) do @call:UnlinkC "%%a" "%%b"
+@echo;
 
 pause
 @popd

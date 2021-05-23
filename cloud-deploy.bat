@@ -13,7 +13,7 @@
 @set "localLowAppData=%USERPROFILE%\AppData\LocalLow"
 @REM =======================================================================
 
-@set "version=v1.1.2"
+@set "version=v1.1.3"
 @set "lupdate=2021-05-23"
 @title Cloud Save Linker %version%
 @echo;
