@@ -1,3 +1,8 @@
+1.1.2 - 2021-05-23  lxvs
+
+	* fix an issue that entering nothing when ask for overwrite causes
+	  script to stop.
+
 1.1.1 - 2021-05-23  lxvs
 
 	* rename mygames (Documents\My Games) to my_games

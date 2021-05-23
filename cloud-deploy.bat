@@ -13,7 +13,7 @@
 @set "localLowAppData=%USERPROFILE%\AppData\LocalLow"
 @REM =======================================================================
 
-@set "version=v1.1.1"
+@set "version=v1.1.2"
 @set "lupdate=2021-05-23"
 @title Cloud Save Linker %version%
 @echo;
@@ -72,7 +72,7 @@ if /i "%owcfm%"=="Y" (
     mklink /d "%~2" "%cd%\%~1" >nul 2>&1 || goto failed
     @echo ^> Finished.
 ) else @echo ^> Ignored.
-exit /b
+exit /b 0
 
 :LinkC
 if exist "%~2" (
@@ -94,7 +94,7 @@ if /i "%owcfm%"=="Y" (
     mklink /d "%cloudFolder%\%~1" "%cd%\%~2" >nul 2>&1 || goto failed
     @echo ^> Finished.
 ) else @echo ^> Ignored.
-@exit /b
+@exit /b 0
 
 :failed
 @echo ^> ERROR: Please run this as administrator.
