@@ -1,3 +1,9 @@
+1.1.1 - 2021-05-23  lxvs
+
+	* rename mygames (Documents\My Games) to my_games
+	* rename savedgames (Documents\Saved Games) to saved_games
+	* add another 'savedgames', Documents\SavedGames
+
 1.1.0 - 2021-05-23  lxvs
 
 	* Create file gamelist and gamelist-steamcloud. Now scripts read

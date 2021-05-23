@@ -7,12 +7,13 @@
 @set "steamCommon=%steamFolder%\steamapps\common"
 @set "cloudFolder=%steamFolder%\userdata\%steamUserId%"
 @set "documents=%USERPROFILE%\Documents"
-@set "mygames=%documents%\My Games"
-@set "savedgames=%USERPROFILE%\Saved Games"
+@set "my_games=%documents%\My Games"
+@set "savedgames=%USERPROFILE%\SavedGames"
+@set "saved_games=%USERPROFILE%\Saved Games"
 @set "localLowAppData=%USERPROFILE%\AppData\LocalLow"
 @REM =======================================================================
 
-@set "version=v1.1.0"
+@set "version=v1.1.1"
 @set "lupdate=2021-05-23"
 @title Cloud Save Linker %version%
 @echo;
@@ -23,8 +24,9 @@
 
 @pushd %~dp0
 
-if not exist "%mygames%" md "%mygames%"
+if not exist "%my_games%" md "%my_games%"
 if not exist "%savedgames%" md "%savedgames%"
+if not exist "%saved_games%" md "%saved_games%"
 if not exist "%documents%\Klei" (
     if exist "DoNotStarveTogether" md "%documents%\Klei"
     if exist "OxygenNotIncluded" md "%documents%\Klei" 2>nul
